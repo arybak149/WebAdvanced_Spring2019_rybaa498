@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+body {
+  font-family: "open sans";
+}
+
+#tree li {
+  display: block;
+  border: 1px solid gray;
+  padding: 1em;
+  cursor: pointer;
+  margin-bottom: .5em;
+}
+#tree li:hover {
+  background-color: #fafafa;
+}
+#tree ul ul {
+  display: none;
+}
+#tree h3, #tree h4 {
+  margin: 0;
+  padding: 1em;
+}
+
+.back {
+  border-radius: 100px;
+  background-color: gray;
+  color: white;
+  text-transform: uppercase;
+  font-size: .75em;
+  padding: .5em;
+}
+
+.selectedAnswer > ul {
+  display: block !important;
+}
+
+.notSelected {
+  display: none !important;
+  opacity: .5;
+}
+
+.show {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden;
+}

@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body{
+  font-family: "open sans";
+}
+
+#tree{
+ 
+  li{
+    display: block;
+    border:1px solid gray;
+    padding:1em;
+    cursor:pointer;
+    margin-bottom: .5em;
+    &:hover{
+      background-color: #fafafa;
+    }
+  }
+  ul ul{
+    display:none;
+  }
+  h3,h4{
+    margin:0;
+    padding:1em;
+  }
+}
+.back{
+  //display:none;
+  border-radius:100px;
+  background-color:gray;
+  color:white;
+  text-transform: uppercase;
+  font-size: .75em;
+  padding:.5em;
+}
+.selectedAnswer{
+  //color:red;
+  &>ul{
+    display:block !important;
+  }
+  & li{
+    //color:black;
+  }
+
+}
+.selectedChild{
+  //color: green !important;
+  //border:2px solid green !important;
+}
+.notSelected{
+  //color:blue;
+  display: none !important;
+  opacity:.5;
+}
+// Classes
+.show {
+  display: block !important;
+}
+.hidden {
+  display: none !important;
+}
+.invisible {
+  visibility: hidden;
+}
