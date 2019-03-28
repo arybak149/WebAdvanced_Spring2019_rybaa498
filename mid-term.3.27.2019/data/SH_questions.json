@@ -1,0 +1,22 @@
+[
+    {
+        "question": "When interacting with strangers in the public spaces, what would be considered a 'street harassment?",
+        "choices": [ "Helping someone with heavy bag/s", "Commenting on the weather, current events, and similar topics", "Telling someone to smile", "Wishing someone a nice day"],
+        "correctAnswer": 3
+    },
+    {
+        "question": "What is the most common form of 'street harassment?",
+        "choices": [  "Unwelcome touching","Verbal harassment", "Being physically followed", "Genital flashing" ],
+        "correctAnswer": 2
+    },
+    {
+        "question": "How many laws does New York have that prohibit some form of verbal harassment?",
+        "choices": [ "Three(3)", "Five(5)","Four(4)","Two(2)" ],
+        "correctAnswer": 2
+    },
+    {
+        "question": "What is the percentage of women and men who have experienced some form of sexual harrasment or assult in their lifetime?",
+        "choices": [ "84% of women and 30% of men", "81% of women and 43% of men", "75% of women and 25% of men", "81% of women and 35% of men"],
+        "correctAnswer": 2
+    }
+]
