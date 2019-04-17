@@ -1,0 +1,24 @@
+body {
+	
+background-color: lightgray;
+	
+}
+
+.container {
+	text-align: center;
+	padding-top: 50px;
+}
+
+img {
+	size: 50%;
+}
+
+button {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+h3{
+	margin-top: 20px;
+	
+}
