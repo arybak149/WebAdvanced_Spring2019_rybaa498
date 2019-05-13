@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Promise of CEDAW - Final Project</title>
+     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./mapstyles.css">
+    <link href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+    <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+ 
+  
+    <link rel="icon" href="http://example.com/favicon.png">  
+    </head>
+      
+  
+  <body>
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-icon-container">
+            <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a>
+            <a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-search fa-lg white"></i></a>
+          </div>
+          <a class="navbar-brand" href="#">CEDAW map</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn">&nbsp;&nbsp;About</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    <!--
+      We put the map and sidebar in a map-wrapper so they will be positioned
+      and kept together
+    -->
+    
+    <div class="map-wrapper">
+      <div id="map"></div>
+        
+     <div class="sidebar">
+        <!-- We create a div where the feature data will go when clicked on: -->
+       <div class="textbox">
+  
+        <!--CEDAW section-->    
+         <div class="about"> </div>
+          <br>  
+          <h4>the women’s equality treaty</h4> 
+           <div class="radiobutton">
+             <form id = "rdbtn2">
+               <input type="radio" name="timeline" class="year1990-radio" value="1990">1990
+               <input type="radio" name="timeline" class="year2000-radio" value="2000">2000
+               <input type="radio" name="timeline" class="year2010-radio" value="2010">2010
+               <input type="radio" name="timeline" class="year2018-radio" value="2018">2019
+               <input type="radio" name="timeline" class="all-radio" value="all">All
+               <input type="radio" name="timeline" class="reset-radio" value="reset">Reset
+            </form>
+            <br>
+         </div>
+  <div class="legend-header">
+           Status of Ratification:
+          </div>
+            <div class="markers">
+              <span class="legend-marker1a"></span>State Parties<div>
+                <span class="legend-marker1b"></span>Signatory (not yet party)</div>
+              <div><span class="legend-marker1c"></span>No Action</div>
+               <div><span class="legend-marker1d"></span>No Data</div></div><div></div>
+
+<!--CS radio options-->
+           <br>
+             <h4>women's rights around the world by issue</h4>
+<div class="radiobutton2">
+  <form id="rdbtn3">
+    <input type="radio" name="crank" class="constitution-radio" value="constitution">Constitution
+    <input type="radio" name="crank" class="property-radio" value="property">Property
+    <input type="radio" name="crank" class="work-radio" value="work">Work
+      <br>
+    <input type="radio" name="crank" class="sexual-radio" value="sexual harassment">Sexual Harassment
+    <input type="radio" name="crank" class="domestic-radio" value="domestic violence">Domestic Violence
+    <input type="radio" name="crank" class="nodata-radio" value="nodata">No Data
+    <input type="radio" name="crank" class="reset4-radio" value="reset4">Reset
+      <br>
+        <br>
+  </form>       
+</div>
+<div class="legend-header" id="legend">
+           Legend:
+          </div>
+   
+             <div class="markers">
+            <span class="legend-marker2a"></span>  Full-positive Response<div>
+                <span class="legend-marker2b"></span> Partial-positive Response</div>
+              <div><span class="legend-marker2c"></span>  Non-positive Response</div>
+               <div><span class="legend-marker2d"></span>  No Data </div>
+              </div>
+          <div>    
+<!--best worst places for women button options--> 
+            
+            <br><h4>the best and worst places for women</h4>
+              
+           <div class = "buttons2">
+                <button type="button" class="topthird-b" name="category" value="TopThird">20 Most </button>
+                <button type="button" class="middlethird-b" name="category" value="MiddleThird" >Middle</button>
+                <button type="button" class="bottomthird-b" name="category" value="BottomThird" >20 Least</button>
+             <br><br>
+             <button type="button" class="nodata-b" name="category" value="NoData" >No Data</button>   
+             <button type="button" class="all-b" name="category" value="All" >ALL</button>
+                <button type="button" class="reset3-b" name="category" value="Reset">Reset</button>
+            </div>
+       </div>
+           <br>
+  <div class="legend-header">
+           Legend:
+          </div>
+            <div class="markers"> 
+               <div>
+              <span class="legend-marker3a"></span>  Most gender-equal countries<div>
+                <span class="legend-marker3b"></span>  Middle gender-equal countries</div>
+              <div><span class="legend-marker3c"></span>  Least gender-equal countries</div>
+               <div><span class="legend-marker3d"></span>  No Data</div>
+        </div>
+         </div>
+        </div>
+      </div>
+      </div>
+      
+      <!--sidebar div end-->   
+    <!--pop up box-->
+
+      <div class="overlay" id="closebtn">
+        <div class="overlayclose" id="myOverlay"> 
+          <a href="#" id="thisOver" class="closebtn" onclick="closeOverlay()">Close</a>
+        </div>
+        <div class="overlay-content">
+        </div>
+      </div> 
+ <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">CEDAW’s promise to counter gender discrimination</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs nav-justified" id="aboutTabs">
+              <li class="active"><a href="#about" data-toggle="tab">&nbsp;About the project</a></li>
+              <li><a href="#metadata" data-toggle="tab">&nbsp;Metadata</a></li>
+                <li><a href="#method" data-toggle="tab">&nbsp;Methodology</a></li>    
+              <li><a href="#disclaimer" data-toggle="tab">&nbsp;Disclaimer</a></li>
+              
+            </ul>
+            <div class="tab-content" id="aboutTabsContent">
+              <div class="tab-pane fade active in" id="about">
+                  <br>
+             <p>The Convention on the Elimination of all Forms of Discrimination Against Women (CEDAW) is considered as the most comprehensive code of women’s rights at international level, with its focus on socioeconomic, civil, political and cultural rights in all spheres of women’s lives. CEDAW was adopted by the United Nations General Assembly on December 18, 1979, and countries began to implement it on September 3, 1981. CEDAW’s ratification represents an important reaffirmation of nation’s commitment to the human rights of women, and a momentous step forward for women around the world. Furthermore, countries that have ratified the Convention are legally bound to put its provisions into practice.
+                  </p>
+                  
+            <p>Today, it is time to examine as to whether the promise of CEDAW was delivered as initially intended. To rightly assess the success of CEDAW, it is imperative to ask the following questions: </p>
+                  <ul id="questions">
+                      <li>Which countries have laws that promote gender equality?</li>
+                      <li>Which countries have laws preventing?</li>
+                      <li>Which countries have laws preventing domestic violence against women?</li>
+                      <li>Which countries grant equal rights for men and women on property ownership?</li>
+                      <li>Which countries have laws prohibiting sexual harassment at work and public space?</li>
+                  </ul>
+                  
+                  <p>
+                  Using data from the World Bank and the UN, I created an interactive map to answer above raised questions and provide a snapshot of how women's rights are legislated around the world. Additionally, to add a much more in-depth dimension and urgency towards women’s rights issues across the globe, I used the Gender Gap Index to identify the best and worst places for women.
+                  </p>
+              </div>
+              <div id="disclaimer" class="tab-pane fade text-danger">
+                  <br>
+                <p> The information on this website/map is being provided as a general resource for individuals interested in women's rights.</p>
+                  <p>The website and/or its representatives assume no liability based on the information contained herein in the event of accident or illness, or for damage or injury to person or property of any nature whatsoever.
+
+</p>
+              </div>
+              <div class="tab-pane fade" id="metadata">
+                  <br>
+             <p>
+         To create this map, I used the following datasets: 
+       </p>   
+      <ul id="questions">          
+       <li><a href="https://treaties.un.org/" target="_blank">United Nations: The Convention on the Elimination of All Forms of Discrimination against Women (CEDAW)</a></li> 
+        <li><a href="http://wbl.worldbank.org/" target="_blank"> The World Bank: Women, Business and the Law (WBL)</a></li>
+        <li>
+          <a href="https://www.weforum.org/" target="_blank">World Economic Forum: The Global Gender Gap 2017</a>
+         </li>  
+        </ul>
+              </div>
+             
+              <div class="tab-pane fade" id="method">
+            <br> 
+           <p>The map contains eight layers in total. Data for each layer was cleaned, re-organized and geocoded using ArcGIS Desktop. </p>
+<p>For “the women’s equality treaty layer,” I created InfoWindow (aka pop up text on mouse hover) to show each country’s name. </p>
+<p>For "women's rights around the world by issue layers,” I created bubbles in different color to show identified full, partial and non-positive and no data responses. </p>
+<p>For “the best and worst places for women layer,” I used polygon pattern fill with the opacity at 75 %, so other layers could be visible and to add more in-depth dimension to the map.  </p>
+
+         <br>
+      
+              </div>    
+                
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+     <!-- We create a div where the feature data will go when clicked on: -->
+    
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://cartodb-libs.global.ssl.fastly.net/carto.js/v4.0.0-beta/carto.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="./mapscript.js"></script> 
+      <script src="./navscript.js"></script>
+     
+    
+  
+
+  </body>
+</html>
